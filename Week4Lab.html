@@ -2,53 +2,7 @@
 <html>
 	<head>
 		<title>  Week 4 Lab </title>
-		<style>
-			html, body {
-				font-size: 120%;
-			}
-			
-			label {
-				font-weight: bold;
-				font-size: 130%;
-			}
-			
-			#content {
-				width: 800px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-			
-			input {
-				font-size: 120%;
-			
-			}
-			
-			input[type=button] {
-				border: 1px solid #6E329D;
-				border-radius : 25px;
-				color: #fff;
-				text-decoration: none;
-				padding: 0.2em 0.5em;
-				margin: 0.5em;
-				margin-left: auto;
-				margin-right: auto;
-				
-				background: linear-gradient(to bottom, #e570e7 0%,#c85ec7 47%,#a849a3 100%); /* W3C */
-			}
-			
-			input[type=text] {
-				border: 2px solid lightblue;
-			}
-			
-			input[type=button]:hover {
-				background: linear-gradient(to right, #e570e7 0%,#c85ec7 47%,#a849a3 100%); /* W3C */	
-			}
-			
-			input[type=text]:hover {
-				background-color: #e9f6fd;
-			}
-				
-		</style>
+		
 	</head>
 	<body>
 
@@ -66,46 +20,7 @@
 		</form>
 		
 		
-		<script>
-			
-			var data = {
-			'mousex' : [],
-			'mousey' : [],
-			'title' : ""
-			};
-			
-			function showResults() {
-				console.clear();
-				console.log(data);
-			}
-			
-			var results = document.getElementById('showResults');
-			
-			results.addEventListener("click", showResults);
-			
-		//XY movement of mouse;
-			
-			function onMouseMove(e){
-				data.mousex.push(e.clientX);
-				data.mousey.push(e.clientY);
-		
-		
-				if ( data.mousex.length > 100 && data.mousey.length > 100){
-					document.removeEventListener('mousemove', onMouseMove);
-					}	
-			}		
-	document.addEventListener('mousemove', onMouseMove);
-
-		//Puts document title at top of page;
-
-
-	function onWindowLoad() {
-		data.title = document.title;
-	}
 	
-	window.addEventListener('load', onWindowLoad);
-		
-		</script>
 		
 	</body>
 </html>
